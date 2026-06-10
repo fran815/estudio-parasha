@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/index_layout.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <!-- HEBREW DATE -->
+    <div id="heb-date"></div>
+    <!-- MAIN TITLE -->
+    <div class="main-title">
+        <h1>דֶּרֶךְ הַנַּוָּד</h1>
+    </div>
+    <hr>
+    <!-- MOBILE SIDUR SECTION -->
+    <div class="sidur-main-div-mobile">
+        <div class="sidur-list-mobile">
+            <p><strong>Meditar el Sidur</strong></p>
+            <ul>
+                <li>Kavaná</li>
+                <li data-name="mode-ani">Mode Ani</li>
+                <li>Amidá</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="main-body-div">
+        <div class="parasha-main-div">
+            <!-- SIDUR SECTION -->
+            <div class="sidur-main-div">
+                <div class="sidur-list">
+                    <p><strong>Sidur</strong></p>
+                    <ul>
+                        <li>Kavana</li>
+                        <li>Mode Ani</li>
+                        <li>Amida</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- PARASHA WEEK -->
+            <div class="parasha-meditations-div">
+                <div class="container">
+                    <div class="container-corners">
+                        <h3 style="margin-block: 5px; margin-left: 5px;">Estudio de la Parashá</h3>
+                        <div id="div-for-flex">
+                            <div>
+                                <div class="parasha-day-div">
+                                    <div id="parasha-container">
+                                        <img src="/static/css/img/tora.png" alt="">
+                                        <p id="parasha-name"></p>
+                                    </div>
+                                    <div class="reading-box">
+                                        <img src="/static/css/img/calendar.png" alt="">
+                                        <p id="weekdays"></p>
+                                    </div>
+                                </div>
+                                <div class="verses-list">
+                                    <div class="verses-div-content">
+                                        <p><strong>Séfer: </strong><span id="book-name"></span></p>
+                                        
+                                        <!-- <span id="from-list"></span>
+                                        <p> - </p>
+                                        <span id="to-list"></span> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="verses-div">
+                                <div id="verse-div-for-flex">
+                                    <p id="from-list"></p>
+                                    <p> - </p>
+                                    <p id="to-list"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script type="module" src="/static/js/parasha.js"></script>
+
+                <!-- MEDITATIONS SECTION -->
+                <div class="meditation-section-div">
+                    <div class="section-1">
+                        <p id="section-name">Análisis</p>
+                        <div>
+                            <p id="analisis"></p>
+                        </div>
+                    </div>
+                    <div class="section-1">
+                        <p id="section-name">Hitbonenut</p>
+                        <div>
+                            <p id="invdividual"></p>
+                        </div>
+                    </div>
+                    <div class="section-1">
+                        <p id="section-name">Tikún Olam</p>
+                        <div>
+                           <p id="social"></p>
+                        </div>
+                    </div>
+                </div>
+                <script type="module" src="/static/js/meditations.js"></script>
+            </div>
+        </div>
+
+        <div class="secondary-main-div">
+            <!-- SHABBAT SECTION -->
+            <div id="shabbat-title-div">
+                <div id="shabbat-section-content">
+                    <p id="shabbat-title">Shabbat</p>
+                    <div id="hebcal-shabbat"></div>
+                </div>
+            </div>
+            <script src="/static/js/shabat_data.js"></script>
+
+
+            <!-- TEHILIM SECTION -->
+            <div class="tehilim-section-div">
+                <div id="tehilim-section-content">
+                    <p id="tehilim-title"><strong>Tehilim</strong></p>
+                    <p><strong>{{ te_number }}</strong></p>
+                    <!-- <p style="text-align: left; margin-bottom: 5px; font-size: 12px;">"{{ te_cont }}"</p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

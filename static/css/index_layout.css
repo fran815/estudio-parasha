@@ -1,0 +1,410 @@
+body {
+    background-image: url(/static/css/img/wooden.jpg);
+    margin: 0;
+}
+/* MAIN BODY DIV */
+#main-body-div {
+    display: flex;
+    margin: 5px;
+    background-color: transparent;
+}
+
+
+/* HEBREW DATE */
+#heb-date {
+    text-align: right;
+    font-size: 22px;
+    margin-right: 5px;
+    font-family: sans-serif;
+    color: transparent;
+}
+
+/* MAIN TITLE */
+.main-title {
+    font-family: sans-serif;
+}
+.main-title h1 {
+    margin-block: 0;
+    margin-left: 5px;
+}
+
+
+
+/* SIDUR SECTION */
+.sidur-main-div-mobile {display: none;}
+.sidur-main-div {
+    font-family: sans-serif;
+}
+.sidur-list {
+    text-align: center;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 255);
+    border: 2px solid gold;
+}
+.sidur-list p {margin: 0; margin-top: 10px; color: white;}
+.sidur-list ul {
+    width: 85px;
+    height: 150px;
+    list-style-type:none; 
+    padding-left: 0;
+    margin: 0;
+}
+.sidur-list ul li {
+    margin-block: 25px;
+    color: gold;
+}
+
+
+
+
+.parasha-main-div {
+    display: flex;
+    background-color: transparent;
+}
+
+/* PARASHA CONTAINER */
+.container {
+    display: flex;
+    font-size: 18px;
+    margin-block: 5px;
+    font-family: sans-serif;
+    border-radius: 5px;
+    /* background: #492300;  
+    background: -webkit-linear-gradient(to bottom, #9e6a4c, #603813);  
+    background: linear-gradient(to bottom, #9e6a4c, #603813);  */
+    background: #e8ac20;
+    background: radial-gradient(circle,rgba(232, 172, 32, 1) 0%, rgba(115, 69, 1, 1) 100%);
+
+
+}
+.container-corners {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    margin-inline: 2px;
+    background-color: white;
+    border-radius: 5px;
+}
+#parasha-container {
+    display: flex;
+    align-items: center;
+    width: 100px;
+    margin-left: 5px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top: 1px solid #9e6a4c;
+    border-bottom: 1px solid #9e6a4c;
+    border-right: 1px solid #9e6a4c;
+    border-left: 1px solid #9e6a4c;
+}
+#div-for-flex {
+    display: flex;
+}
+#parasha-container p {
+    margin: 3px;
+    margin-right: 5px;
+}
+#parasha-container img {
+    width: 18px;
+    height: 18px;
+    margin-left: 3px;
+    margin-right: 5px;
+}   
+.container p {margin-block: 0;}
+/* PARASHA/WEEKDAY SECTION */
+.parasha-day-div {
+    display: flex;
+}
+/* BOOKNAME SECTION */
+.reading-box {
+    display: flex;
+    width: 100px;
+    align-items: center;
+    border-top: 1px solid #9e6a4c;
+    border-bottom: 1px solid #9e6a4c;
+    border-right: 1px solid #9e6a4c;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.reading-box img {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+.reading-box P {margin-block: 0; margin-inline: 5px;}
+#verses-div {
+    display: flex;
+    margin-left: auto;
+}
+#verse-div-for-flex {
+    display: flex;
+    margin-inline: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #492300;
+}
+.verses-list {
+    display: flex;
+    align-items: center;
+    margin-block: 5px;
+}
+.verses-div-content {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+#book-name {
+    font-size: 18px;
+}
+#from-list {margin-block: 0;}
+.verses-list p {margin-block: 0; margin-left: 3px;}
+
+/* PARASHA WITH MEDITATIONS */
+
+
+/* MEDITATIONS SECTION */
+.meditation-section-div {
+    font-family: sans-serif;
+}
+.meditation-section-div p {
+    margin: 0;
+    font-style: italic;
+}
+.section-1 {
+    height: 120px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    /* background-color: rgb(39, 39, 192); */
+    background: #294ef2;
+    background: radial-gradient(circle,rgba(41, 78, 242, 1) 0%, rgba(1, 14, 115, 1) 100%);
+
+}
+#section-name {
+    color: white; 
+    font-style: normal; 
+    margin-left: 5px;
+}
+.section-1 div {
+    height: 98px;
+    background-color: white;
+    margin-inline: 2px;
+    margin-bottom: 2px;
+    border-radius: 5px;
+}
+.section-1 span {
+    margin-left: 3px;
+    font-weight: bold;
+}
+.section-1 p {
+    margin: 3px;
+}
+
+
+
+.secondary-main-div {
+    background-color: transparent;
+    color: white;
+}
+
+/* TEHILIM SECTION */
+#tehilim-title {font-size: 22px; margin-block: 0;}
+.tehilim-section-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95px;
+    font-family: sans-serif;
+    margin: 5px;
+    border-radius: 5px;
+    border: 2px solid yellow;
+    background: #294ef2;
+    background: radial-gradient(circle,rgba(41, 78, 242, 1) 0%, rgba(1, 14, 115, 1) 100%);
+}
+#tehilim-section-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85px; 
+    width: 168px; 
+    border: 1px solid yellow; 
+    border-radius: 3px;
+}
+.tehilim-section-div p {
+    margin-block: 0;
+}
+
+
+
+
+/* SHABAT CONAINER */
+#shabbat-title-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95px;
+    font-family: sans-serif;
+    font-size: 22px;
+    border-radius: 5px;
+    border: 2px solid yellow;
+    margin: 5px;
+    background: #294ef2;
+    background: radial-gradient(circle,rgba(41, 78, 242, 1) 0%, rgba(1, 14, 115, 1) 100%);
+
+}
+#shabbat-section-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85px; 
+    width: 168px; 
+    border: 1px solid yellow; 
+    border-radius: 3px;
+}
+#shabbat-title-div #shabbat-title {margin: 0; font-weight: bold;}
+div.hebcal-container {
+    font-family: sans-serif;
+}
+
+div.hebcal-container div h3 {
+    display: none;
+}
+
+div.hebcal-container div ul.hebcal-results { list-style-type:none; padding-left: 0; }
+div.hebcal-container div ul {margin-block: 0;}
+div.hebcal-container div ul.hebcal-results li {
+    margin-left: 0;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: normal;
+}
+
+.copyright {
+    display: none;
+}
+
+div.hebcal-container div div.hebcal-results .candles { color: red; font-size: large }
+div.hebcal-container div div.hebcal-results .havdalah { color: green }
+div.hebcal-container div div.hebcal-results .parashat { color: black; background: #ff9 }
+div.hebcal-container div div.hebcal-results .holiday { display: none }
+
+
+
+
+
+/*----------------------- RESPONSIVE WAY -----------------------*/
+/* FOR TABLET */
+
+/* FOR CELLPHONE */
+@media (max-width: 500px) {
+    /* DATE */
+    #heb-date {
+        font-size: 15px;
+    }
+
+    /* MAIN TITLE */
+    .main-title {
+        text-align: center;
+    }
+
+    /* MAIN DIV */
+    #main-body-div {
+        flex-direction: column;
+    }
+
+    /* SIDUR SECTION */
+    .sidur-list {display: none;}
+    
+    .sidur-main-div-mobile {
+        display: flex;
+        justify-content: center;
+        margin-inline: 5px;
+    }
+    .sidur-list-mobile {
+        width: 100%;
+        font-size: 15px;
+        border-radius: 5px;
+        background-color: rgba(115, 69, 1, 1);
+    }
+    .sidur-list-mobile p {
+        margin: 0; 
+        text-align: center; 
+        color: black; 
+        border-bottom: 1px solid rgba(255, 255, 255, 0.644);
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        background: #e8ac20;
+        background: radial-gradient(circle,rgba(232, 172, 32, 1) 0%, rgba(115, 69, 1, 1) 100%);
+    }
+    .sidur-list-mobile ul {
+        display: flex;
+        text-align: center;
+        list-style-type:none; 
+        padding-left: 0;
+        margin: 0;
+    }
+    .sidur-list-mobile ul li {
+        width: 100%;
+        margin-right: auto;
+        text-align: center;
+        color: white;
+    }
+    .sidur-list-mobile ul li[data-name="mode-ani"] {
+        border-left: 1px solid rgba(255, 255, 255, 0.644);
+        border-right: 1px solid rgba(255, 255, 255, 0.644);
+    }
+
+
+    /* PARASHA SECTION */
+    .container {
+        flex-direction: column;
+        font-size: 15px;
+    }
+    .container-corners {
+        width: auto;
+    }
+    .parasha-main-div {
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+    }
+
+    /* MEDITATIONS SECTION */
+    .meditation-section-div {
+        font-size: 14px;
+    }
+
+
+
+    /* SECUNDARY DIV */
+    .secondary-main-div {
+        display: flex;
+    }
+
+
+    /* TEHILIM SECTION */
+    #tehilim-title {font-size: 16px; margin-block: 0;}
+    .tehilim-section-div {
+        width: 50%;
+        text-align: center;
+        align-items: center;
+        margin: 5px;
+    }
+    .tehilim-section-div p {font-size: 15px;}
+
+
+    /* SHABAT SECTION */
+    #shabbat-title-div {
+        width: 50%;
+        text-align: center;
+        align-items: center;
+        margin: 5px;
+    }
+    #shabbat-title-div #shabbat-title {font-size: 15px;}
+    div.hebcal-container div ul.hebcal-results li {
+        font-size: 15px;
+    }
+}
