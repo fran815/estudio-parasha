@@ -40,7 +40,7 @@ async function cargarParashaYVersiculos() {
     const response = await fetch(url);
     const data = await response.json();
 
-    const dayList = ["יּוֹם רִאשׁוֹן", "יּוֹם שֵׁנִי", "יּוֹם שְׁלִישִׁי", "יּוֹם רְבִיעִי", "יּוֹם חֲמִישִׁי", "יּוֹם שִׁשִּׁי(6", "שַׁבָּת"]
+    const dayList = ["יּוֹם רִאשׁוֹן", "יּוֹם שֵׁנִי", "יּוֹם שְׁלִישִׁי", "יּוֹם רְבִיעִי", "יּוֹם חֲמִישִׁי", "יּוֹם שִׁשִּׁי", "שַׁבָּת"]
     const seferTora = ["בְּרֵאשִׁית","שְׁמוֹת","וַיִּקְרָא","בְּמִדְבַּר","דְּבָרִים"]
     const torahBooks = ["Genesis","Exodus","Leviticus","Numbers","Deuteronomy"]
     const endVerse = document.getElementById('to-list').textContent
@@ -57,7 +57,36 @@ async function cargarParashaYVersiculos() {
     document.getElementById('from-list').textContent = data.items[2].fullkriyah[diaActual+1].b;
     document.getElementById('to-list').textContent = data.items[2].fullkriyah[diaActual+1].e;
 
-    // console.log(data.items[2].hdate)
+    // VARIABLES FOR GEMINI
+    const fromVerse = data.items[2].fullkriyah[diaActual+1].b;
+    const untilVerse = data.items[2].fullkriyah[diaActual+1].e;
+    const bookName = data.items[2].name.he;
+
+    const idReading = `${bookName} ${fromVerse}-${untilVerse}`;
+    obtenerAnalisisDeGemini(idReading);
+    // console.log(data.items)
+}
+
+async function obtenerAnalisisDeGemini(idRead) {
+    try {
+        // Enviamos el ID de la lectura a nuestra propia ruta de Flask
+        const response = await fetch('/obtener-analisis', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ idRead: idRead })
+        });
+
+        const data = await response.json();
+        
+        // Colocamos el análisis en un elemento de tu HTML (asegúrate de crear este id en tu HTML)
+        document.getElementById('analisis-gemini').textContent = data.analisis;
+
+    } catch (error) {
+        console.error("Error al obtener el análisis:", error);
+        document.getElementById('analisis-gemini').textContent = "No se pudo cargar el análisis en este momento.";
+    }
 }
 
 // Ejecutar la función al cargar la página

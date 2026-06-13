@@ -166,6 +166,7 @@ body {
 /* MEDITATIONS SECTION */
 .meditation-section-div {
     font-family: sans-serif;
+    display: none;
 }
 .meditation-section-div p {
     margin: 0;
@@ -292,7 +293,24 @@ div.hebcal-container div div.hebcal-results .parashat { color: black; background
 div.hebcal-container div div.hebcal-results .holiday { display: none }
 
 
-
+/* ANALISIS CONTENT */
+.analisis-div {
+    background-color: transparent;
+    display: flex;
+}
+#analisis-content {
+    height: 330px;
+    background-color: white;
+    margin-inline: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    overflow: auto;
+    
+}
+#analisis-gemini {
+    margin: 5px;
+    text-align: left;
+}
 
 
 /*----------------------- RESPONSIVE WAY -----------------------*/
