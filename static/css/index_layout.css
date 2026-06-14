@@ -166,7 +166,6 @@ body {
 /* MEDITATIONS SECTION */
 .meditation-section-div {
     font-family: sans-serif;
-    display: none;
 }
 .meditation-section-div p {
     margin: 0;
@@ -244,7 +243,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 95px;
+    /* height: 95px; */
     font-family: sans-serif;
     font-size: 22px;
     border-radius: 5px;
@@ -252,19 +251,25 @@ body {
     margin: 5px;
     background: #294ef2;
     background: radial-gradient(circle,rgba(41, 78, 242, 1) 0%, rgba(1, 14, 115, 1) 100%);
-
+    color: white;
 }
 #shabbat-section-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 85px; 
+    height: 85px;
     width: 168px; 
     border: 1px solid yellow; 
     border-radius: 3px;
 }
-#shabbat-title-div #shabbat-title {margin: 0; font-weight: bold;}
+
+#hebcal-shabbat {
+    font-size: 15px;
+}
+
+#shabbat-section-content a {color: white; text-decoration: none; font-size: 12px;}
+#shabbat-title-div #shabbat-title {margin: 0; font-weight: bold; font-size: 22px;}
 div.hebcal-container {
     font-family: sans-serif;
 }
@@ -292,25 +297,6 @@ div.hebcal-container div div.hebcal-results .havdalah { color: green }
 div.hebcal-container div div.hebcal-results .parashat { color: black; background: #ff9 }
 div.hebcal-container div div.hebcal-results .holiday { display: none }
 
-
-/* ANALISIS CONTENT */
-.analisis-div {
-    background-color: transparent;
-    display: flex;
-}
-#analisis-content {
-    height: 330px;
-    background-color: white;
-    margin-inline: 10px;
-    border-radius: 5px;
-    border: 1px solid gray;
-    overflow: auto;
-    
-}
-#analisis-gemini {
-    margin: 5px;
-    text-align: left;
-}
 
 
 /*----------------------- RESPONSIVE WAY -----------------------*/

@@ -3,6 +3,7 @@ from tehilim import buscar_salmo
 import os
 import json
 from google import genai
+from google.genai import types
 
 app = Flask(__name__)
 client = genai.Client()
@@ -13,8 +14,12 @@ DOCUMENT_CACHE = "cache_data.json"
 @app.route('/')
 def index():
     get_daily_tehilim = buscar_salmo()
-    tehilim_number = get_daily_tehilim["nombre"]
-    tehilim_content = get_daily_tehilim["descripcion"]
+    if get_daily_tehilim == "Hoy no se proporcionara salmo":
+        tehilim_number = "Hoy no hay lectura"
+        tehilim_content = " "
+    else:
+        tehilim_number = get_daily_tehilim["nombre"]
+        tehilim_content = get_daily_tehilim["descripcion"]
 
     return render_template('index.html', te_number=tehilim_number,
                                         te_cont=tehilim_content)
@@ -40,18 +45,24 @@ def obtener_analisis():
         Versículos a analizar:
         "{id_reading_today}"
         
-        Por favor, proporciona un análisis breve (no mas de 10 renglones) estructurado exactamente en tres partes:
-        1. **Perspectiva Reformada:** Una interpretación contemporánea y progresista de los versículos, enfocada en los valores éticos universales.
-        2. **Aplicación Individual:** Cómo puede una persona aplicar esta enseñanza en su crecimiento personal, espiritualidad y vida diaria (resaltando la autonomía de la conciencia).
-        3. **Aplicación Social (Tikún Olam):** Cómo se traduce esta enseñanza en responsabilidad comunitaria, justicia social, inclusión y mejora de la sociedad.
-        
-        Mantén un tono inspirador, respetuoso y conciso. Separa los puntos con saltos de linea cuando finalice cada uno para distinguirlos.
-        Evita decir "aqui esta un analisis" o palabras de ese estilo, por favor.
+        Por favor, proporciona un análisis breve (no mas de 6 renglones en total) estructurado exactamente en tres partes.
+        Devuelve la respuesta estrictamente en un formato JSON con la siguiente estructura de llaves:
+        {{
+            "perspectiva_reformada": "Tu texto aquí...",
+            "aplicacion_individual": "Tu texto aquí...",
+            "aplicacion_social": "Tu texto aquí..."
+        }}
+
+        Mantén un tono inspirador, respetuoso y conciso. 
+        Evita introducciones como "aquí está el análisis". Devuelve solo el objeto JSON directo.
         """
 
         response = client.models.generate_content(
             model='gemini-2.5-flash',
-            contents=prompt
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                response_mime_type="application/json"
+            )
         )
         final_analisis = response.text
 
@@ -62,7 +73,9 @@ def obtener_analisis():
         with open(DOCUMENT_CACHE, "w", encoding="utf-8") as f:
             json.dump(new_cache, f, ensure_ascii=False, indent=4)
     
-    return jsonify({"analisis": final_analisis})
+    analisis_obj = json.loads(final_analisis)
+    
+    return jsonify(analisis_obj)
 
 
 
