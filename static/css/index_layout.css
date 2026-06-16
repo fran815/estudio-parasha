@@ -1,11 +1,11 @@
 body {
-    background-image: url(/static/css/img/wooden.jpg);
+    /* background-image: url(/static/css/img/wooden.jpg); */
+    background-color: rgb(231, 231, 231);
     margin: 0;
 }
 /* MAIN BODY DIV */
 #main-body-div {
     display: flex;
-    margin: 5px;
     background-color: transparent;
 }
 
@@ -60,31 +60,25 @@ body {
 
 .parasha-main-div {
     display: flex;
-    background-color: transparent;
+    width: 100%;
 }
 
 /* PARASHA CONTAINER */
 .container {
     display: flex;
     font-size: 18px;
-    margin-block: 5px;
+    margin-block: 15px;
+    margin-inline: 10px;
     font-family: sans-serif;
-    border-radius: 5px;
-    /* background: #492300;  
-    background: -webkit-linear-gradient(to bottom, #9e6a4c, #603813);  
-    background: linear-gradient(to bottom, #9e6a4c, #603813);  */
-    background: #e8ac20;
-    background: radial-gradient(circle,rgba(232, 172, 32, 1) 0%, rgba(115, 69, 1, 1) 100%);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.342), 0 1px 3px rgba(0, 0, 0, 0.322);
 
 
 }
 .container-corners {
     width: 100%;
-    margin-top: 5px;
-    margin-bottom: 2px;
-    margin-inline: 2px;
-    background-color: white;
-    border-radius: 5px;
+    background-color: rgb(236, 236, 236);
+    border-radius: 8px;
 }
 #parasha-container {
     display: flex;
@@ -169,28 +163,26 @@ body {
 }
 .meditation-section-div p {
     margin: 0;
-    font-style: italic;
+    font-family: sans-serif;
 }
 .section-1 {
     height: 120px;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    /* background-color: rgb(39, 39, 192); */
-    background: #294ef2;
-    background: radial-gradient(circle,rgba(41, 78, 242, 1) 0%, rgba(1, 14, 115, 1) 100%);
+    margin-inline: 10px;
+    margin-block: 5px;
+    border-bottom: 1px solid rgb(189, 161, 1);
 
 }
 #section-name {
-    color: white; 
-    font-style: normal; 
+    font-weight: bold;
+    font-size: 18px;
     margin-left: 5px;
+    color: rgb(59, 59, 59);
 }
 .section-1 div {
-    height: 98px;
-    background-color: white;
+    height: auto;
     margin-inline: 2px;
     margin-bottom: 2px;
-    border-radius: 5px;
+    font-size: 14px;
 }
 .section-1 span {
     margin-left: 3px;
@@ -213,13 +205,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 95px;
+    height: 50px;
     font-family: sans-serif;
     margin: 5px;
-    border-radius: 5px;
-    border: 2px solid yellow;
-    background: #294ef2;
-    background: radial-gradient(circle,rgba(41, 78, 242, 1) 0%, rgba(1, 14, 115, 1) 100%);
+    border-radius: 8px;
+    background-color: rgb(30, 43, 56);
 }
 #tehilim-section-content {
     display: flex;
@@ -227,8 +217,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 85px; 
-    width: 168px; 
-    border: 1px solid yellow; 
+    width: 168px;
     border-radius: 3px;
 }
 .tehilim-section-div p {
@@ -243,14 +232,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: 95px; */
+    height: 50px;
     font-family: sans-serif;
     font-size: 22px;
-    border-radius: 5px;
-    border: 2px solid yellow;
+    border-radius: 8px;
     margin: 5px;
-    background: #294ef2;
-    background: radial-gradient(circle,rgba(41, 78, 242, 1) 0%, rgba(1, 14, 115, 1) 100%);
+    background-color: rgb(30, 43, 56);
     color: white;
 }
 #shabbat-section-content {
@@ -258,10 +245,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 85px;
     width: 168px; 
-    border: 1px solid yellow; 
-    border-radius: 3px;
 }
 
 #hebcal-shabbat {
@@ -325,23 +309,21 @@ div.hebcal-container div div.hebcal-results .holiday { display: none }
     .sidur-main-div-mobile {
         display: flex;
         justify-content: center;
-        margin-inline: 5px;
+        margin-top: 15px;
+        font-family: sans-serif;
+        border-top: 1px solid rgb(189, 161, 1);
+        border-bottom: 1px solid rgb(189, 161, 1);
+        background-color: #ecddd4c2;
     }
     .sidur-list-mobile {
         width: 100%;
         font-size: 15px;
-        border-radius: 5px;
-        background-color: rgba(115, 69, 1, 1);
+        margin-block: 10px;
     }
     .sidur-list-mobile p {
         margin: 0; 
         text-align: center; 
         color: black; 
-        border-bottom: 1px solid rgba(255, 255, 255, 0.644);
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        background: #e8ac20;
-        background: radial-gradient(circle,rgba(232, 172, 32, 1) 0%, rgba(115, 69, 1, 1) 100%);
     }
     .sidur-list-mobile ul {
         display: flex;
@@ -354,11 +336,12 @@ div.hebcal-container div div.hebcal-results .holiday { display: none }
         width: 100%;
         margin-right: auto;
         text-align: center;
-        color: white;
+        font-weight: bold;
+        color: rgb(189, 143, 28);
     }
     .sidur-list-mobile ul li[data-name="mode-ani"] {
-        border-left: 1px solid rgba(255, 255, 255, 0.644);
-        border-right: 1px solid rgba(255, 255, 255, 0.644);
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
     }
 
 
@@ -373,13 +356,11 @@ div.hebcal-container div div.hebcal-results .holiday { display: none }
     .parasha-main-div {
         display: flex;
         flex-direction: column;
-        background-color: transparent;
     }
 
     /* MEDITATIONS SECTION */
     .meditation-section-div {
-        font-size: 14px;
-    }
+        margin-top: 20px;    }
 
 
 
@@ -407,7 +388,7 @@ div.hebcal-container div div.hebcal-results .holiday { display: none }
         align-items: center;
         margin: 5px;
     }
-    #shabbat-title-div #shabbat-title {font-size: 15px;}
+    #shabbat-title-div #shabbat-title {font-size: 16px;}
     div.hebcal-container div ul.hebcal-results li {
         font-size: 15px;
     }

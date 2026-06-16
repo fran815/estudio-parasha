@@ -33,7 +33,7 @@ def buscar_salmo():
         else:
             salmo_actual = str(dia_efectivo)
 
-        if len(salmo_actual) > 1:
+        if len(salmo_actual) >= 1:
             return data[salmo_actual]
         else:
             return False
